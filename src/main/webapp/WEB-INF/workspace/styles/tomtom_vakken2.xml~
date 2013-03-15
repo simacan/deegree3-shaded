@@ -1,0 +1,122 @@
+<FeatureTypeStyle xmlns="http://www.opengis.net/se" xmlns:app="http://www.deegree.org/app" xmlns:ogc="http://www.opengis.net/ogc" xmlns:deegreeogc="http://www.deegree.org/ogc" xmlns:sed="http://www.deegree.org/se" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/se http://schemas.opengis.net/se/1.1.0/FeatureStyle.xsd http://www.deegree.org/se http://schemas.deegree.org/se/1.1.0/Symbolizer-deegree.xsd">
+  <Name>tomtom</Name>
+
+ 
+
+        <Rule>
+          <Name>white</Name>
+	<MinScaleDenominator>0</MinScaleDenominator>
+	<MaxScaleDenominator>100000</MaxScaleDenominator>
+          <ogc:Filter>
+            <ogc:PropertyIsGreaterThan>
+              <ogc:PropertyName>app:frc</ogc:PropertyName>
+              <ogc:Literal>0</ogc:Literal>
+            </ogc:PropertyIsGreaterThan>
+          </ogc:Filter>
+
+          <LineSymbolizer>
+            <Geometry>
+		<ogc:Function name="LineOffset">
+                 <ogc:PropertyName>app:route_wgs</ogc:PropertyName>
+		<ogc:Literal>0.0007</ogc:Literal>
+		<ogc:Function name="GetCurrentScale" />
+		</ogc:Function>
+            </Geometry>
+            <Stroke>
+              <SvgParameter name="stroke">#FFFFFF</SvgParameter>
+              <SvgParameter name="stroke-width">6</SvgParameter>
+              <SvgParameter name="stroke-linecap">butt</SvgParameter>
+              <SvgParameter name="stroke-linejoin">round</SvgParameter>
+            </Stroke>
+
+          </LineSymbolizer>
+	</Rule>
+	<Rule>
+	 <Name>color</Name>
+	 <MinScaleDenominator>0</MinScaleDenominator>
+         <MaxScaleDenominator>100000</MaxScaleDenominator>
+
+          <ogc:Filter>
+            <ogc:PropertyIsGreaterThan>
+              <ogc:PropertyName>app:frc</ogc:PropertyName>
+              <ogc:Literal>0</ogc:Literal>
+            </ogc:PropertyIsGreaterThan>
+          </ogc:Filter>
+
+          <LineSymbolizer>
+            <Geometry>
+                <ogc:Function name="LineOffset">
+                               <ogc:PropertyName>app:route_wgs</ogc:PropertyName>
+                <ogc:Literal>0.0007</ogc:Literal>
+                <ogc:Function name="GetCurrentScale" />
+                </ogc:Function>
+            </Geometry>
+	   <Stroke>
+<!--              <SvgParameter name="stroke"><ogc:Function name="Dictionary" /></SvgParameter>-->
+              <SvgParameter name="stroke">#00FF00</SvgParameter>
+              <SvgParameter name="stroke-width">2</SvgParameter>
+              <SvgParameter name="stroke-linecap">butt</SvgParameter>
+              <SvgParameter name="stroke-linejoin">round</SvgParameter>
+            </Stroke>
+          </LineSymbolizer>
+        </Rule>
+
+       <Rule>
+          <Name>white</Name>
+	<MinScaleDenominator>0</MinScaleDenominator>
+	<MaxScaleDenominator>999999999</MaxScaleDenominator>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>app:frc</ogc:PropertyName>
+              <ogc:Literal>0</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+
+          <LineSymbolizer>
+            <Geometry>
+		<ogc:Function name="LineOffset">
+                 <ogc:PropertyName>app:route_wgs</ogc:PropertyName>
+		<ogc:Literal>0.0007</ogc:Literal>
+		<ogc:Function name="GetCurrentScale" />
+		</ogc:Function>
+            </Geometry>
+            <Stroke>
+              <SvgParameter name="stroke">#FFFFFF</SvgParameter>
+              <SvgParameter name="stroke-width">6</SvgParameter>
+              <SvgParameter name="stroke-linecap">butt</SvgParameter>
+              <SvgParameter name="stroke-linejoin">round</SvgParameter>
+            </Stroke>
+
+          </LineSymbolizer>
+	</Rule>
+	<Rule>
+	 <Name>color</Name>
+	 <MinScaleDenominator>0</MinScaleDenominator>
+         <MaxScaleDenominator>999999999</MaxScaleDenominator>
+
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>app:frc</ogc:PropertyName>
+              <ogc:Literal>0</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+
+          <LineSymbolizer>
+            <Geometry>
+                <ogc:Function name="LineOffset">
+                               <ogc:PropertyName>app:route_wgs</ogc:PropertyName>
+                <ogc:Literal>0.0007</ogc:Literal>
+                <ogc:Function name="GetCurrentScale" />
+                </ogc:Function>
+            </Geometry>
+	   <Stroke>
+<!--              <SvgParameter name="stroke"><ogc:Function name="Dictionary" /></SvgParameter>-->
+              <SvgParameter name="stroke">#00FF00</SvgParameter>
+              <SvgParameter name="stroke-width">2</SvgParameter>
+              <SvgParameter name="stroke-linecap">butt</SvgParameter>
+              <SvgParameter name="stroke-linejoin">round</SvgParameter>
+            </Stroke>
+          </LineSymbolizer>
+        </Rule>
+
+      </FeatureTypeStyle>

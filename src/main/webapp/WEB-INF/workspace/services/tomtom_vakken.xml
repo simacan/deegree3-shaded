@@ -1,0 +1,33 @@
+<wms:deegreeWMS xmlns:wms="http://www.deegree.org/services/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dgws="http://www.deegree.org/webservices" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" configVersion="3.1.0" xsi:schemaLocation="http://www.deegree.org/services/wms http://schemas.deegree.org/services/wms/3.1.0/wms_configuration.xsd">
+
+  <wms:ServiceConfiguration>
+
+
+    <wms:DefaultLayerOptions>
+      <wms:AntiAliasing>BOTH</wms:AntiAliasing>
+      <wms:MaxFeatures>100000</wms:MaxFeatures>
+      <wms:FeatureInfoRadius>10</wms:FeatureInfoRadius>
+    </wms:DefaultLayerOptions>
+
+    <wms:UnrequestableLayer>
+      <wms:Title>CITE WMS root layer</wms:Title>
+      <wms:CRS>EPSG:4326</wms:CRS>
+
+      <!-- feature store example -->
+      <wms:RequestableLayer>
+        <wms:Name>tomtom</wms:Name>
+        <wms:Title>tomtom</wms:Title>
+        <wms:FeatureStoreId>tomtom_vakken</wms:FeatureStoreId>
+        <wms:DirectStyle>
+          <wms:File>../styles/tomtom_vakken2.xml</wms:File>
+        </wms:DirectStyle>
+      </wms:RequestableLayer>
+
+
+    </wms:UnrequestableLayer>
+
+
+
+  </wms:ServiceConfiguration>
+
+</wms:deegreeWMS>
