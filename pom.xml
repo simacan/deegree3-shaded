@@ -1,17 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>nl.sensact</groupId>
+  <groupId>com.simacan</groupId>
   <artifactId>deegree-shaded</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.6-SNAPSHOT</version>
-  <name>mapserver Maven Webapp</name>
+  <version>0.10-SNAPSHOT</version>
+  <name>simacan-deegree-shaded</name>
   <url>http://maven.apache.org</url>
+  <properties>
+      <deegree.version>3.2-rc3-SNAPSHOT</deegree.version>
+  </properties>
   <dependencies>
     <dependency>
     	<groupId>org.deegree</groupId>
     	<artifactId>deegree-services-wms</artifactId>
-    	<version>3.2-pre13-SNAPSHOT</version>
+    	<version>${deegree.version}</version>
     	<type>jar</type>
     	<exclusions>
     		<exclusion>
@@ -20,30 +23,23 @@
     		</exclusion>
     	</exclusions>
     </dependency>
-   <!-- 
-    <dependency>
-    	<groupId>org.deegree</groupId>
-    	<artifactId>deegree-services-wfs</artifactId>
-    	<version>3.2-pre13-SNAPSHOT</version>
-    	<type>jar</type>
-    	<exclusions>
-    		<exclusion>
-    			<artifactId>jai-imageio</artifactId>
-    			<groupId>jai</groupId>
-    		</exclusion>
-    	</exclusions>
-    </dependency>
-     -->
+
     <dependency>
     	<groupId>org.deegree</groupId>
     	<artifactId>deegree-core-style</artifactId>
-    	<version>3.2-pre13-SNAPSHOT</version>
+    	<version>${deegree.version}</version>
     	<type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>org.deegree</groupId>
+        <artifactId>deegree-layers-feature</artifactId>
+        <version>${deegree.version}</version>
+        <type>jar</type>
     </dependency>
     <dependency>
     	<groupId>org.deegree</groupId>
     	<artifactId>deegree-featurestore-sql</artifactId>
-    	<version>3.2-pre13-SNAPSHOT</version>
+    	<version>${deegree.version}</version>
     	<type>jar</type>
     </dependency>
     
@@ -55,7 +51,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>mapserver</finalName>
+    <finalName>deegree-shaded</finalName>
 
     <plugins>
       <plugin>

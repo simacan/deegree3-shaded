@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>nl.sensact</groupId>
+  <groupId>com.simacan</groupId>
   <artifactId>deegree-shaded</artifactId>
-  <name>mapserver Maven Webapp</name>
-  <version>0.0.6-SNAPSHOT</version>
+  <name>simacan-deegree-shaded</name>
+  <version>0.10-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
   <build>
-    <finalName>mapserver</finalName>
+    <finalName>deegree-shaded</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -46,5 +46,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <properties>
+    <deegree.version>3.2-rc3-SNAPSHOT</deegree.version>
+  </properties>
 </project>
 
