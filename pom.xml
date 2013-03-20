@@ -26,6 +26,13 @@
 
     <dependency>
     	<groupId>org.deegree</groupId>
+    	<artifactId>deegree-services-wfs</artifactId>
+    	<version>${deegree.version}</version>
+    	<type>jar</type>
+    </dependency>
+
+    <dependency>
+    	<groupId>org.deegree</groupId>
     	<artifactId>deegree-core-style</artifactId>
     	<version>${deegree.version}</version>
     	<type>jar</type>
