@@ -10,6 +10,15 @@
   <properties>
       <deegree.version>3.2.0</deegree.version>
   </properties>
+  
+  <repositories>
+    <repository>
+        <id>project.local</id>
+        <name>project</name>
+        <url>file:${project.basedir}/repo</url>
+    </repository>
+  </repositories>
+  
   <dependencies>
     <dependency>
     	<groupId>org.deegree</groupId>
@@ -21,7 +30,18 @@
     			<artifactId>jai-imageio</artifactId>
     			<groupId>jai</groupId>
     		</exclusion>
+    	 <exclusion>
+    	  <artifactId>postgresql</artifactId>
+    	  <groupId>postgresql</groupId>
+    	 </exclusion>
     	</exclusions>
+    </dependency>
+
+    <dependency>
+        <groupId>postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>9.2-1002.jdbc4</version>
+        <type>jar</type>
     </dependency>
 
     <dependency>
@@ -48,6 +68,12 @@
     	<artifactId>deegree-featurestore-sql</artifactId>
     	<version>${deegree.version}</version>
     	<type>jar</type>
+     <exclusions>
+      <exclusion>
+       <artifactId>postgresql</artifactId>
+       <groupId>postgresql</groupId>
+      </exclusion>
+     </exclusions>
     </dependency>
     
     <dependency>
