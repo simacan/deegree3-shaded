@@ -4,7 +4,7 @@
   <groupId>com.simacan</groupId>
   <artifactId>deegree-shaded</artifactId>
   <name>simacan-deegree-shaded</name>
-  <version>0.10-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
   <build>
     <finalName>deegree-shaded</finalName>
@@ -47,7 +47,7 @@
     </dependency>
   </dependencies>
   <properties>
-    <deegree.version>3.2-rc3-SNAPSHOT</deegree.version>
+    <deegree.version>3.2.0</deegree.version>
   </properties>
 </project>
 
